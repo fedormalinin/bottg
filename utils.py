@@ -6,7 +6,7 @@ def detect_platform(url: str):
         return "Это YouTube"
 
     if "instagram.com" in url:
-        return "ЭтоInstagram"
+        return "Это Instagram"
 
     if "vk.com" in url:
         return "Это VK"

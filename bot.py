@@ -1,4 +1,5 @@
 import os
+
 from datetime import datetime
 
 from telegram import Update
@@ -34,7 +35,7 @@ def make_send_callback(app):
 
     def callback(chat_id, file_path, error=None):
         import asyncio
-        asyncio.create_task(send_result(app, chat_id, file_path, error))
+        asyncio.get_event_loop().create_task(send_result(app, chat_id, file_path, error))
 
     return callback
 
